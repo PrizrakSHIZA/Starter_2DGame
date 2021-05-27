@@ -34,9 +34,6 @@ public class RoadMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-            FuelSystem.Fuel = 0.3f;
-
         parts = parts.OrderByDescending(x => x.position.y).ToArray();
         foreach (Transform part in parts)
         {

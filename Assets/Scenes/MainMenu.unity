@@ -369,6 +369,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1747477239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7237791515699126427, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+  m_PrefabInstance: {fileID: 4233971335090004259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179307e2372307f4d8da42568fe38e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4233971335090004259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,6 +387,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 212766759120421503, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212766759120421503, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212766759120421503, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 978234961910592687, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -392,6 +415,10 @@ PrefabInstance:
       propertyPath: mixer
       value: 
       objectReference: {fileID: 24100000, guid: 63d2dd773bc45b84495cf8ddffc1dd38, type: 2}
+    - target: {fileID: 3440141896324909826, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_Name
+      value: Settings
+      objectReference: {fileID: 0}
     - target: {fileID: 3744341640296881810, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_Value
       value: 0
@@ -407,6 +434,14 @@ PrefabInstance:
     - target: {fileID: 3744341640296881810, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186332555640214690, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_Name
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186332555640214690, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4233971335359206592, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_Name
@@ -520,6 +555,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4623175976287265552, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4769593842235656714, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -551,6 +590,18 @@ PrefabInstance:
     - target: {fileID: 5204834701473707070, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MusicVolumeChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447545495664978892, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1747477239}
+    - target: {fileID: 5447545495664978892, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447545495664978892, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7684270742095629339, guid: dc99874b278c23d4586ff2e82b07ee06, type: 3}
       propertyPath: m_AnchorMax.x

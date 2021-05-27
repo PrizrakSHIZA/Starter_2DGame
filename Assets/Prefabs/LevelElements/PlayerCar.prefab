@@ -579,9 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58cea9e05d57a04d92ce5b931e563ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 6608943931256320177}
-  audioSource2: {fileID: 6608943931256320177}
-  audioSource3: {fileID: 3881933866069200926}
+  CrushSound: {fileID: 0}
 --- !u!1001 &2257407956566529309
 PrefabInstance:
   m_ObjectHideFlags: 0

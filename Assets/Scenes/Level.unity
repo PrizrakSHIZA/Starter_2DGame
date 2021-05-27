@@ -237,6 +237,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8344369881249574247, guid: 1d00ac898fbdc8b498a0bf3992871d43, type: 3}
   m_PrefabInstance: {fileID: 8344369881799758557}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &920816805 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3881933866069200926, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
+  m_PrefabInstance: {fileID: 1641631556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &933001182
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,21 +529,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 814103357}
     - target: {fileID: 2120196063242209126, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
+      propertyPath: CrushSound
+      value: 
+      objectReference: {fileID: 920816805}
+    - target: {fileID: 2120196063242209126, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
       propertyPath: audioSource2
       value: 
       objectReference: {fileID: 2009365478}
-    - target: {fileID: 4107259910134866463, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4107259910134866463, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4107259910134866463, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5408488520328456307, guid: 9aa7bf567c793b34694c8ecda1b4979e, type: 3}
       propertyPath: slider
       value: 
