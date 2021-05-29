@@ -31,7 +31,7 @@ public class NPCSpawner : MonoBehaviour
         
         //randomize line
         System.Random rand = new System.Random();
-        line = rand.Next(1, 4);
+        line = rand.Next(1, 5);
         lastline = line;
 
         if (Time.timeSinceLevelLoad - lastInterval > interval)
@@ -45,7 +45,7 @@ public class NPCSpawner : MonoBehaviour
             if (doubled)
             {
                 while(line == lastline)
-                    line = rand.Next(1, 4);
+                    line = rand.Next(1, 5);
                 Lines.TryGetValue(line, out pos);
                 pos += Random.Range(-range, range);
                 temp = Instantiate(allCars[Random.Range(0, 2)], transform.parent);
