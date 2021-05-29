@@ -20,6 +20,7 @@ public class CollisionDetect : MonoBehaviour
         //Pick up fuel
         if (collision.collider.tag == "Fuel")
         {
+            AudioSource.PlayClipAtPoint(collision.gameObject.GetComponent<AudioSource>().clip, gameObject.transform.position);
             Destroy(collision.gameObject);
             transform.parent.GetComponent<FuelSystem>().AddFuel(Random.Range(25, 50));
         }
