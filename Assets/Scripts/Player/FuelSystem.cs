@@ -7,7 +7,7 @@ public class FuelSystem : MonoBehaviour
 {
     public static float Fuel = 100f;
     public Slider slider;
-
+    public AudioSource audioSource;
     float lastTime;
 
     private void Start()
@@ -17,6 +17,9 @@ public class FuelSystem : MonoBehaviour
 
     private void Update()
     {
+        if (RoadMovement.gameover)
+            return;
+
         if (Time.timeSinceLevelLoad - lastTime > 0.1 && Fuel > 0)
         {
             Fuel -= 0.2f;
@@ -28,7 +31,10 @@ public class FuelSystem : MonoBehaviour
         }
 
         if (Fuel == 0)
+        {
+            audioSource.Play();
             RoadMovement.GameOver(GameOverFlag.fuel);
+        }
     }
 
     public void AddFuel(float amount)
