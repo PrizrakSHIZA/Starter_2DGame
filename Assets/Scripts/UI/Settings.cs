@@ -17,6 +17,7 @@ public class Settings : MonoBehaviour
     public GameObject mainMenu;
 
     public static bool SideControl = false;
+    public static string level = "Level";
     static string filepath;
     float masterVol, musicVol, SFXVol;
 

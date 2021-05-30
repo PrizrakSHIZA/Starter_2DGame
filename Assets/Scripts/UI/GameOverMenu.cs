@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     public void MainMenu()
-    { 
-        SceneManager.LoadScene("MainMenu");
+    {
+        Settings.level = "MainMenu";
+        SceneManager.LoadScene("LoadingScreen");
     }
 
     public void RestartGame()
     {
         Settings.ResetAll();
-        SceneManager.LoadScene("Level");
+        Settings.level = "Level";
+        SceneManager.LoadScene("LoadingScreen");
     }
 }

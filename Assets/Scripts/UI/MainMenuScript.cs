@@ -13,7 +13,8 @@ public class MainMenuScript : MonoBehaviour
     public void StartGame()
     {
         Settings.ResetAll();
-        SceneManager.LoadScene("Level");
+        Settings.level = "Level";
+        SceneManager.LoadScene("LoadingScreen");
     }
 
     public void OpenSettings()
