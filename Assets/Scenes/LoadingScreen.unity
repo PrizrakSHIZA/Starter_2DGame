@@ -196,6 +196,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 978988738006740100, guid: 10b9eb9f8dca39c40a5213b3866b648c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3189800755924386682, guid: 10b9eb9f8dca39c40a5213b3866b648c, type: 3}
       propertyPath: m_Name
       value: Canvas
