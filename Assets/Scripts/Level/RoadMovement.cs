@@ -27,9 +27,10 @@ public class RoadMovement : MonoBehaviour
     {
         menu = GameObject.Find("Canvas").gameObject;
         lasttime = 0;
-        parts[0] = gameObject.transform.GetChild(0);
-        parts[1] = gameObject.transform.GetChild(1);
-        parts[2] = gameObject.transform.GetChild(2);
+        for (int i = 0; i < parts.Length; i++)
+        {
+            parts[i] = gameObject.transform.GetChild(i);
+        }
     }
 
     void Update()
