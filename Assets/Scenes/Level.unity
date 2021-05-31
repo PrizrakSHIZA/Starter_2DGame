@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affe91880a4dbb949bc379c9330ed1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 63d2dd773bc45b84495cf8ddffc1dd38, type: 2}
   EngineSound: {fileID: 1861586877}
   Music: {fileID: 2009365478}
 --- !u!4 &995942545

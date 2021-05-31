@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public delegate void Notify();
 
 public class RoadMovement : MonoBehaviour
 {
+    public AudioMixer mixer;
+
     public AudioSource EngineSound;
     public AudioSource Music;
 
@@ -25,6 +28,11 @@ public class RoadMovement : MonoBehaviour
 
     private void Start()
     {
+        //load volume settings
+        mixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
+        mixer.SetFloat("MusicVol", PlayerPrefs.GetFloat("MusicVol"));
+        mixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol"));
+        //initialization road
         menu = GameObject.Find("Canvas").gameObject;
         lasttime = 0;
         for (int i = 0; i < parts.Length; i++)

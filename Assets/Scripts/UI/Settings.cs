@@ -37,6 +37,7 @@ public class Settings : MonoBehaviour
             value = -80;
         mixer.SetFloat("MasterVol", value);
         masterVol = value;
+        PlayerPrefs.SetFloat("MasterVol", masterVol);
     }
 
     public void MusicVolumeChanged(float value)
@@ -45,6 +46,7 @@ public class Settings : MonoBehaviour
             value = -80;
         mixer.SetFloat("MusicVol", value);
         musicVol = value;
+        PlayerPrefs.SetFloat("MusicVol", musicVol);
     }
 
     public void SFXVolumeChanged(float value)
@@ -53,6 +55,7 @@ public class Settings : MonoBehaviour
             value = -80;
         mixer.SetFloat("SFXVol", value);
         SFXVol = value;
+        PlayerPrefs.SetFloat("SFXVol", SFXVol);
     }
 
     public void CloseSettings()
