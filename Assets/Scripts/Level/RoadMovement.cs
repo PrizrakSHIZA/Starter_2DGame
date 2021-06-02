@@ -28,6 +28,8 @@ public class RoadMovement : MonoBehaviour
 
     private void Start()
     {
+        //make screen dont fall asleep
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         //load volume settings
         mixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
         mixer.SetFloat("MusicVol", PlayerPrefs.GetFloat("MusicVol"));
