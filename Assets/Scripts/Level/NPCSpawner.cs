@@ -40,7 +40,7 @@ public class NPCSpawner : MonoBehaviour
             Lines.TryGetValue(line, out pos);
             pos += Random.Range(-range, range);
             //instantiate prefab
-            GameObject temp = Instantiate(allCars[Random.Range(0, 3)], transform.parent);
+            GameObject temp = Instantiate(allCars[Random.Range(0, allCars.Length)], transform.parent);
             temp.transform.position = new Vector3(pos, 8f, -1f);
             if (doubled)
             {
@@ -48,7 +48,7 @@ public class NPCSpawner : MonoBehaviour
                     line = rand.Next(1, 5);
                 Lines.TryGetValue(line, out pos);
                 pos += Random.Range(-range, range);
-                temp = Instantiate(allCars[Random.Range(0, 2)], transform.parent);
+                temp = Instantiate(allCars[Random.Range(0, allCars.Length)], transform.parent);
                 temp.transform.position = new Vector3(pos, 8f, -1f);
             }
 
