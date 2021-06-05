@@ -16,14 +16,20 @@ public class Settings : MonoBehaviour
     public GameObject settings;
     public GameObject mainMenu;
 
+    public static bool tutorial = true;
     public static bool SideControl = false;
     public static string level = "Level";
     static string filepath;
-    float masterVol, musicVol, SFXVol;
+    static float masterVol, musicVol, SFXVol;
 
     private void Awake()
     {
         filepath = Application.persistentDataPath + "/settings.xml";
+    }
+
+    public void TutorialChanged(bool value)
+    {
+        tutorial = value;
     }
 
     public void ControlChanged(bool value)
@@ -77,7 +83,7 @@ public class Settings : MonoBehaviour
     }
 
     //Save/Read settings
-    public void Save()
+    public static void Save()
     {
         XmlWriterSettings settings = new XmlWriterSettings();
         settings.Indent = true;
@@ -88,6 +94,10 @@ public class Settings : MonoBehaviour
 
         xmlWriter.WriteStartDocument();
         xmlWriter.WriteStartElement("settings");
+
+        xmlWriter.WriteStartElement("Tutorial");
+        xmlWriter.WriteString(tutorial.ToString());
+        xmlWriter.WriteEndElement();
 
         xmlWriter.WriteStartElement("SideButtonsControl");
         xmlWriter.WriteString(SideControl.ToString());
@@ -119,27 +129,47 @@ public class Settings : MonoBehaviour
         //flaot values
         float temp = 0;
 
+        //Play tutorial
+        node = doc.DocumentElement.SelectSingleNode("/settings/Tutorial");
+        if (node != null)
+        {
+            Boolean.TryParse(node.InnerText, out tutorial);
+            GameObject.Find("PlayTutorial").GetComponent<Toggle>().isOn = tutorial;
+        }
+
         //Side buttons control
         node = doc.DocumentElement.SelectSingleNode("/settings/SideButtonsControl");
-        Boolean.TryParse(node.InnerText, out SideControl);
-        GameObject.Find("ToggleControl").GetComponent<Toggle>().isOn = SideControl;
+        if (node != null)
+        {
+            Boolean.TryParse(node.InnerText, out SideControl);
+            GameObject.Find("ToggleControl").GetComponent<Toggle>().isOn = SideControl;
+        }
 
         //master volume
         node = doc.DocumentElement.SelectSingleNode("/settings/MasterVolume");
-        float.TryParse(node.InnerText, out temp);
-        MasterVolumeChanged(temp);
-        GameObject.Find("MasterVolume").GetComponent<Slider>().value = temp;
-        
+        if (node != null)
+        {
+            float.TryParse(node.InnerText, out temp);
+            MasterVolumeChanged(temp);
+            GameObject.Find("MasterVolume").GetComponent<Slider>().value = temp;
+        }
+
         //Music volume
         node = doc.DocumentElement.SelectSingleNode("/settings/MusicVolume");
-        float.TryParse(node.InnerText, out temp);
-        MusicVolumeChanged(temp);
-        GameObject.Find("MusicVolume").GetComponent<Slider>().value = temp;
-        
+        if (node != null)
+        {
+            float.TryParse(node.InnerText, out temp);
+            MusicVolumeChanged(temp);
+            GameObject.Find("MusicVolume").GetComponent<Slider>().value = temp;
+        }
+
         //SFX volume
         node = doc.DocumentElement.SelectSingleNode("/settings/SFXVolume");
-        float.TryParse(node.InnerText, out temp);
-        SFXVolumeChanged(temp);
-        GameObject.Find("SFXVolume").GetComponent<Slider>().value = temp;
+        if (node != null)
+        {
+            float.TryParse(node.InnerText, out temp);
+            SFXVolumeChanged(temp);
+            GameObject.Find("SFXVolume").GetComponent<Slider>().value = temp;
+        }
     }
 }
