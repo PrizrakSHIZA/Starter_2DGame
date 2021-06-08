@@ -16,6 +16,7 @@ public class Settings : MonoBehaviour
     public GameObject settings;
     public GameObject mainMenu;
 
+    public static float lastAd = -999;
     public static bool tutorial = true;
     public static bool SideControl = false;
     public static string level = "Level";
